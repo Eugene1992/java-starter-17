@@ -12,11 +12,9 @@ package hw_01_p2;
  */
 public class Hw01p2 {
     public static void main(String[] args) {
-        byte someDigital;
-        someDigital = 21;
+        int a = 3;
+        System.out.println(Integer.toString(a, 2));
 
-
-
-        System.out.println(someDigital);
     }
+
 }
