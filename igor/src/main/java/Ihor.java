@@ -48,5 +48,49 @@ public class Ihor {
         a1 = (byte) (a1 - b1);
         System.out.println("task10: " + a1 + " " + b1);
 
+        //TODO 1.2
+        /*11 Дано число от 0 до 127 в десятичной системе исчисления.
+        Написать программу, которая переводит данное число в двоичную систему исчисления и выводит в консоль.
+        Запрещается использовать циклы (for, while и т.д.) или условные операторы (if/esle/?:)
+        */
+        System.out.println();
+        System.out.println("task 11:");
+        int tempUserNumber;
+        System.out.println("Enter the number. ");
+
+        //не понятный участок кода
+        Scanner scanner = new Scanner(System.in);
+        byte userNumber = scanner.nextByte();
+        System.out.println("The number is: " + userNumber);
+        //но работает
+
+        byte answer7, answer6, answer5, answer4, answer3, answer2, answer1, answer0;
+        answer7 = (byte) (userNumber / Math.pow(2, 7));
+        tempUserNumber = (byte) (userNumber - answer7 * Math.pow(2, 7));
+        answer6 = (byte) (tempUserNumber / Math.pow(2, 6));
+        tempUserNumber = (byte) (tempUserNumber - answer6 * Math.pow(2, 6));
+        answer5 = (byte) (tempUserNumber / Math.pow(2, 5));
+        tempUserNumber = (byte) (tempUserNumber - answer5 * Math.pow(2, 5));
+        answer4 = (byte) (tempUserNumber / Math.pow(2, 4));
+        tempUserNumber = (byte) (tempUserNumber - answer4 * Math.pow(2, 4));
+        answer3 = (byte) (tempUserNumber / Math.pow(2, 3));
+        tempUserNumber = (byte) (tempUserNumber - answer3 * Math.pow(2, 3));
+        answer2 = (byte) (tempUserNumber / Math.pow(2, 2));
+        tempUserNumber = (byte) (tempUserNumber - answer2 * Math.pow(2, 2));
+        answer1 = (byte) (tempUserNumber / Math.pow(2, 1));
+        answer0 = (byte) (userNumber % 2);
+        System.out.println();
+        System.out.println("answer: " + answer7 + answer6 + answer5 + answer4 + " " + answer3 + answer2 + answer1 + answer0);
+
+        System.out.print("answer 2, using for: ");
+        byte tempAnswer;
+        for (int i = 7; i >= 0; i--) {
+            tempAnswer = (byte) (userNumber / Math.pow(2, i));
+            System.out.print(tempAnswer);
+            userNumber = (byte) (userNumber - tempAnswer * Math.pow(2, i));
+            if (i == 4) {
+                System.out.print(" ");
+            }
+        }
     }
 }
