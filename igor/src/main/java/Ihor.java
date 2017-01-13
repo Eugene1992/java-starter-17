@@ -53,8 +53,7 @@ public class Ihor {
         Написать программу, которая переводит данное число в двоичную систему исчисления и выводит в консоль.
         Запрещается использовать циклы (for, while и т.д.) или условные операторы (if/esle/?:)
         */
-        System.out.println();
-        System.out.println("task 11:");
+        System.out.println("\n\ttask 11:");
         int tempUserNumber;
         System.out.println("Enter the number. ");
 
@@ -79,8 +78,7 @@ public class Ihor {
         tempUserNumber = (byte) (tempUserNumber - answer2 * Math.pow(2, 2));
         answer1 = (byte) (tempUserNumber / Math.pow(2, 1));
         answer0 = (byte) (userNumber % 2);
-        System.out.println();
-        System.out.println("answer: " + answer7 + answer6 + answer5 + answer4 + " " + answer3 + answer2 + answer1 + answer0);
+        System.out.println("answer: \t\t\t " + answer7 + answer6 + answer5 + answer4 + " " + answer3 + answer2 + answer1 + answer0);
 
         System.out.print("answer 2, using for: ");
         byte tempAnswer;
@@ -92,5 +90,15 @@ public class Ihor {
                 System.out.print(" ");
             }
         }
+
+        //task of the presentation
+        double pi = 3.141592653;
+        double e = 2.7182818284590452;
+        System.out.println("\n" + pi);
+        System.out.print(e);
+        String st1 = "\nмоя строка 1";
+        String st2 = "\tмоя строка 2";
+        String st3 = "\rмоя строка 3";
+        System.out.print(st1 + st2 + st3);
     }
 }
