@@ -1,7 +1,5 @@
 package hw_02_t5;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 import java.util.Scanner;
 
 /**
@@ -21,15 +19,37 @@ public class Hw02t5 {
         System.out.print("Введите 4-е число: ");
         d = scan.nextInt();
 
-        if (a > b) {temp1 = a; temp2 = b;} else { temp1 = b; temp2 = a;}
+        if (a > b) {
+            temp1 = a;
+            temp2 = b;
+        } else {
+            temp1 = b;
+            temp2 = a;
+        }
 
-        if (c > d) { temp3 = c; temp4 = d;} else {temp3 = d; temp4 = c;}
+        if (c > d) {
+            temp3 = c;
+            temp4 = d;
+        } else {
+            temp3 = d;
+            temp4 = c;
+        }
 
-        if (temp1 > temp3) {maxim2= temp3;} else {maxim2 = temp1;}
+        if (temp1 > temp3) {
+            maxim2 = temp3;
+        } else {
+            maxim2 = temp1;
+        }
 
-        if (temp2 > temp4) {maxim3=temp2;} else {maxim3=temp4;}
+        if (temp2 > temp4) {
+            maxim3 = temp2;
+        } else {
+            maxim3 = temp4;
+        }
 
-        if (maxim2 > maxim3) {System.out.println(maxim2);} else System.out.println(maxim3);
+        if (maxim2 > maxim3) {
+            System.out.println(maxim2);
+        } else System.out.println(maxim3);
 
 
 
