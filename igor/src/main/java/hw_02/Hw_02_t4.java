@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Created by ihor on 15.01.2017.
  * Опредиление максимальным значением одной из трох переменных (значения всех переменных разные).
  */
-public class hw_02_t4 {
+public class Hw_02_t4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter you number1, number2, number3");

@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Created by ihor on 15.01.2017.
  * Программа, выводящую на экран ближайшее к 10 из двух чисел, введенных с консоли.
  */
-public class hw_02_t3 {
+public class Hw_02_t3 {
     public static void main(String[] args) {
         final int TEN = 10;
         Scanner scanner = new Scanner(System.in);

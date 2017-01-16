@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Программа находить и выводить на экран вещественные корни квадратного уравнения ax²+bx+c=0.
  * В три вещественные переменные a, b и c задает пользователь.
  */
-public class hw_02_t6 {
+public class Hw_02_t6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double a, b, c, D, x1, x2;
