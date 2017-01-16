@@ -5,13 +5,13 @@ import java.util.Scanner;
 /**
  * Created by ihor on 16.01.2017.
  * Написать программу, которая реализует следующий функционал:
-    6.1 Пользователь вводит число в 10-ой системе счисления.
-    6.2 Программа выводит сообщение в котором предлагает пользователю перевести данное число в одну из систем счисления на выбор:
-     в 2-ую
-    в 8-ую
-    в 16-ую
-    6.3 Пользователь выбирает один из предложенных вариантов, программа выполняет соответствующий перевод числа и выводит
- на экран результат.
+ * 6.1 Пользователь вводит число в 10-ой системе счисления.
+ * 6.2 Программа выводит сообщение в котором предлагает пользователю перевести данное число в одну из систем счисления на выбор:
+ * в 2-ую
+ * в 8-ую
+ * в 16-ую
+ * 6.3 Пользователь выбирает один из предложенных вариантов, программа выполняет соответствующий перевод числа и выводит
+ * на экран результат.
  */
 public class Hw_03_t3 {
     public static void main(String[] args) {
@@ -21,8 +21,8 @@ public class Hw_03_t3 {
         System.out.println("number system. (1 = 2, 2 = 8, 3 = 16)");
         int numberSystem = scanner.nextInt();
         int tempAnswer;
-        switch (numberSystem){
-            case 1:{
+        switch (numberSystem) {
+            case 1: {
                 for (int i = 31; i >= 0; i--) {
                     tempAnswer = (int) (number / Math.pow(2, i));
                     System.out.print(tempAnswer);
@@ -33,7 +33,7 @@ public class Hw_03_t3 {
                 }
                 break;
             }
-            case 2:{
+            case 2: {
                 for (int i = 11; i >= 0; i--) {
                     tempAnswer = (int) (number / Math.pow(8, i));
                     System.out.print(tempAnswer);
@@ -44,7 +44,7 @@ public class Hw_03_t3 {
                 }
                 break;
             }
-            case 3:{
+            case 3: {
                 for (int i = 7; i >= 0; i--) {
                     tempAnswer = (int) (number / Math.pow(16, i));
                     switch (tempAnswer) {
