@@ -14,76 +14,66 @@ import java.util.Scanner;
  * на экран результат.
  */
 public class Hw_03_t3 {
+    public static String reverseWithXOR(String string) {
+        char[] array = string.toCharArray();
+        int length = array.length;
+        int half = (int) Math.floor(array.length / 2);
+        for (int i = 0; i < half; i++) {
+            array[i] ^= array[length - i - 1];
+            array[length - i - 1] ^= array[i];
+            array[i] ^= array[length - i - 1];
+        }
+        return String.valueOf(array);
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number");
         int number = scanner.nextInt();
-        System.out.println("number system. (1 = 2, 2 = 8, 3 = 16)");
+        System.out.println("number system. (2, 8 or 16)");
         int numberSystem = scanner.nextInt();
-        int tempAnswer;
-        switch (numberSystem) {
-            case 1: {
-                for (int i = 31; i >= 0; i--) {
-                    tempAnswer = (int) (number / Math.pow(2, i));
-                    System.out.print(tempAnswer);
-                    number = (int) (number - tempAnswer * Math.pow(2, i));
-                    if (i % 4 == 0) {
-                        System.out.print(" ");
+        int flag = 0;
+        String str = "";
+        if (number > 0) {
+            while (number > 0) {
+                switch (number % numberSystem) {
+                    case 10: {
+                        str += "A";
+                        break;
                     }
+                    case 11: {
+                        str += "B";
+                        break;
+                    }
+                    case 12: {
+                        str += "C";
+                        break;
+                    }
+                    case 13: {
+                        str += "D";
+                        break;
+                    }
+                    case 14: {
+                        str += "E";
+                        break;
+                    }
+                    case 15: {
+                        str += "F";
+                        break;
+                    }
+                    default:
+                        str += number % numberSystem;
                 }
-                break;
-            }
-            case 2: {
-                for (int i = 11; i >= 0; i--) {
-                    tempAnswer = (int) (number / Math.pow(8, i));
-                    System.out.print(tempAnswer);
-                    number = (int) (number - tempAnswer * Math.pow(8, i));
-                    if (i % 4 == 0) {
-                        System.out.print(" ");
-                    }
+                number = number >> (byte) (Math.log(numberSystem) / Math.log(2));
+                flag ++;
+                if (flag >= 4){
+                    flag = 0;
+                    str += " ";
                 }
-                break;
             }
-            case 3: {
-                for (int i = 7; i >= 0; i--) {
-                    tempAnswer = (int) (number / Math.pow(16, i));
-                    switch (tempAnswer) {
-                        case 10: {
-                            System.out.print("A");
-                            break;
-                        }
-                        case 11: {
-                            System.out.print("B");
-                            break;
-                        }
-                        case 12: {
-                            System.out.print("C");
-                            break;
-                        }
-                        case 13: {
-                            System.out.print("D");
-                            break;
-                        }
-                        case 14: {
-                            System.out.print("E");
-                            break;
-                        }
-                        case 15: {
-                            System.out.print("F");
-                            break;
-                        }
-                        default:
-                            System.out.print(tempAnswer);
-                    }
-                    number = (int) (number - tempAnswer * Math.pow(16, i));
-                    if (i % 4 == 0) {
-                        System.out.print(" ");
-                    }
-                }
-                break;
-            }
-            default:
-                System.out.println("oops");
         }
+        for (int i = flag; i < 4; i++) {
+            str += "0";
+        }
+        System.out.println(reverseWithXOR(str));
     }
 }
