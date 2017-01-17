@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 /**
  * Задано три переменных, найти и вывести на экран переменную с максимальным значением
- (значения всех переменных разные).
+ * (значения всех переменных разные).
  */
 public class Hw02t4 {
     public static void main(String[] args) {
 
-        int digit1, digit2, digit3, temp1=0;
+        int digit1, digit2, digit3, temp1 = 0;
         Scanner scan = new Scanner(System.in);
         digit1 = scan.nextInt();
         digit2 = scan.nextInt();

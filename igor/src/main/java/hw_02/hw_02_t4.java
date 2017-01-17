@@ -13,13 +13,12 @@ public class hw_02_t4 {
         int temp1 = scanner.nextInt();
         int temp2 = scanner.nextInt();
         int temp3 = scanner.nextInt();
-        if (temp1>temp2 & temp1>temp3) {
+        if (temp1 > temp2 & temp1 > temp3) {
             System.out.println(temp1 + " maxi");
         } else {
             if (temp2 > temp3) {
                 System.out.println(temp2 + " maxi");
-            }
-            else {
+            } else {
                 System.out.println(temp3 + " maxi");
             }
         }
