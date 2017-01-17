@@ -1,5 +1,5 @@
-package hw_01_p1;
-/*
+package hw_01;
+/**
 1. Создать четыре целочисленные переменные типов byte, short, int, long.
 2. Инициализировать переменную типа byte результатом суммы двух любых чисел.
 3. Инициализировать переменную типа short результатом вычитания двух любых чисел.
@@ -15,7 +15,7 @@ package hw_01_p1;
 
 public class Hw01p1 {
     public static void main(String[] args) {
-                     // TODO 1.1:
+        // TODO 1.1:
         byte dgt1=1;
         short dgt2;
         int dgt3;
@@ -25,28 +25,28 @@ public class Hw01p1 {
         dgt3=3;
         dgt4=4;
 
-                    // TODO 1.2:
+        // TODO 1.2:
         byte sum = 2 + 5;
-                    // TODO 1.3:
+        // TODO 1.3:
         short minus = 90 - 30;
-                    // TODO 1.4:
+        // TODO 1.4:
         int segmentation = 66 / 3;
-                    // TODO 1.5:
+        // TODO 1.5:
         long multi = 5 * 5;
-                    // TODO 1.6:
+        // TODO 1.6:
         sum = (byte)(sum + dgt1);
-                    // TODO 1.7:
+        // TODO 1.7:
         sum = (byte)((minus+dgt2)/sum);
-                    // TODO 1.8:
+        // TODO 1.8:
         segmentation = (int)((minus/dgt2)*(sum/dgt1));
-                    // TODO 1.9:
+        // TODO 1.9:
         int a=6,b=5,c;
         System.out.println(a+" "+ b);
         c=a;
         a=b;
         b=c;
         System.out.println(a+" "+ b);
-                    // TODO 1.10:
+        // TODO 1.10:
         a=a+b;
         b=a-b;
         a=a-b;
