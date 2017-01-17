@@ -5,7 +5,7 @@ package hw_03;
  */
 public class Hw03t2 {
     public static void main(String[] args) {
-        for (int temp1 = 1, temp2 = 0, temp3 = 0, i = 1; i < 21; i++) {
+        for (int temp1 = 1, temp2 = 0, temp3, i = 1; i < 21; i++) {
             temp3 = temp1 + temp2;
             System.out.println(i + ". " + temp3);
             temp1 = temp2;
