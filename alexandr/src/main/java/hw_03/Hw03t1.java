@@ -9,7 +9,7 @@ package hw_03;
 public class Hw03t1 {
     public static void main(String[] args) {
         // 1:
-        for (int i = 1000; i <10000 ; i+=3) {
+        for (int i = 1000; i < 10000; i += 3) {
             System.out.println(i);
         }
         // 2:
@@ -17,12 +17,12 @@ public class Hw03t1 {
             System.out.println(temp);
         }
         // 3:
-        for (int temp = 90; temp >= 0 ; temp -=5) {
+        for (int temp = 90; temp >= 0; temp -= 5) {
             System.out.println(temp);
         }
         // 4:
-        for (int temp =2, i = 1;  i <21 ; temp *=2, i++) {
-            System.out.println(i+". "+ temp);
+        for (int temp = 2, i = 1; i < 21; temp *= 2, i++) {
+            System.out.println(i + ". " + temp);
         }
     }
 }
