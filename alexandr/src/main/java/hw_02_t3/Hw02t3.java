@@ -1,12 +1,10 @@
 package hw_02_t3;
 
-import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
-
 import java.util.Scanner;
 
 /**
  * Создать программу, выводящую на экран ближайшее к 10 из двух чисел, введенных с консоли.
- Например, среди чисел 8,5 и 11,45 ближайшее к десяти 11,45.
+ * Например, среди чисел 8,5 и 11,45 ближайшее к десяти 11,45.
  */
 public class Hw02t3 {
     public static void main(String[] args) {
@@ -31,14 +29,9 @@ public class Hw02t3 {
         temp2 = temp2 < temp3 ? temp2 : temp3;
 
         if (temp1 < temp2) {
-            System.out.printf("Ближе первый набор: $d, $d", firstNumber1, firstNumber2);
-        }
-        else if (temp1 > temp2) {
+            System.out.printf("Ближе первый набор: %d, %d", firstNumber1, firstNumber2);
+        } else if (temp1 > temp2) {
             System.out.printf("Ближе второй набор: %d, %d", secondNumber1, secondNumber2);
         } else System.out.println("Обе пары одинаково приближены к главному числу");
-
-
-
-
     }
 }
