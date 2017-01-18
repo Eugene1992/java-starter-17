@@ -6,7 +6,6 @@ package hw_03;
  */
 public class Hw_03_t2 {
     public static void main(String[] args) {
-        //todo: узнать про Фибоначчи
         int fibonachi_n0 = 1, fibonachi_n1 = 1, fibonachi_n2;
         System.out.print(fibonachi_n0 + " " + fibonachi_n1 + " ");
         for (int i = 0; i < 18; i++) {
