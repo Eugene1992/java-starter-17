@@ -1,4 +1,4 @@
-package hw_02;
+package cw_02;
 
 public class ShortLongIf {
     public static void main(String[] args) {

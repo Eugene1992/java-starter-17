@@ -1,4 +1,4 @@
-package hw_02;
+package cw_02;
 
 public class IfElseExample {
     public static void main(String[] args) {
