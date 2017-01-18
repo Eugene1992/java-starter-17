@@ -1,4 +1,4 @@
-package hw_02_t5;
+package hw_02;
 
 import java.util.Scanner;
 
