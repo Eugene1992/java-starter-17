@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Вывод на экран вторую по величине переменную из 4 (значения всех переменных разные).
  */
 
-public class hw_02_t5 {
+public class Hw_02_t5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int temp0, temp1, temp2, temp3, temp4;

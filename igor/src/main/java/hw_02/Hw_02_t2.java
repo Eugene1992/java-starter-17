@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Проверяет и сообщает на экран, является ли введенное с консоли целое число, чётным либо нечётным.
  */
 
-public class hw_02_t2 {
+public class Hw_02_t2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number for parity");
