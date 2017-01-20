@@ -502,7 +502,7 @@
             <property name="allowMissingThrowsTags" value="true"/>
             <property name="allowMissingReturnTag" value="true"/>
             <property name="minLineCount" value="4"/>
-            <property name="allowedAnnotations" value="Override, com.cbs.edu.humans.Main"/>
+            <property name="allowedAnnotations" value="Override, com.cbs.edu.humans.StartChoiceHW"/>
             <property name="allowThrowsTagsForSubclasses" value="true"/>
             <!-- disable getters/setters check -->
             <property name="allowMissingPropertyJavadoc" value="true"/>

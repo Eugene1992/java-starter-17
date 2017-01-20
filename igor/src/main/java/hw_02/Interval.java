@@ -8,9 +8,9 @@ import java.util.Scanner;
  * в числовие промежутоки [0 - 14) [15 - 35) [36 - 50) [50 - 100]
  */
 public class Interval {
-    public static void main(String[] args) {
+    public static void start() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your number.");
+        System.out.println("Hi. This is Interval. \nEnter your number.");
         double number = scanner.nextDouble();
         if (number < 0 | number > 100) {
             System.out.println("The number is not in the interval");

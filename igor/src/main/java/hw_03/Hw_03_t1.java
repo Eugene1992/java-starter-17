@@ -12,7 +12,7 @@ package hw_03;
  * первые 20 элементов последовательности 2 4 8 16 32 64 128 ….
  */
 public class Hw_03_t1 {
-    public static void main(String[] args) {
+    public static void review() {
         //task 1
         int number = 1000;
         while (number < 10000) {

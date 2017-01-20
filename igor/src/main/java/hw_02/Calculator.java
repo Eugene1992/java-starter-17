@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Calculator
  */
 public class Calculator {
-    public static void main(String[] args) {
+    public static void start() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hi. This is Calculator. \nEnter tow number.");
         double result, number1 = scanner.nextDouble(), number2 = scanner.nextDouble();

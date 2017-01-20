@@ -1,3 +1,5 @@
+package hw_01;
+
 import java.io.IOException;
 
 /*TODO 1.1
@@ -15,7 +17,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Hw_01 {
-    public static void main(String[] args) {
+    public static void review() {
         System.out.println("Hello world!");
         //task 1-5
         byte tempByte = 5 + 7;
