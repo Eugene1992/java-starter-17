@@ -1,12 +1,12 @@
-package metod;
+package method;
 
 import java.util.Scanner;
 
 /**
  * Created by ihor on 18.01.2017.
- * test Metod
+ * test Method
  */
-public class Metod {
+public class Method {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         //int quantity = scanner.nextInt();

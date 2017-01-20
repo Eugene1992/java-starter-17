@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 import java.util.Scanner;
 
-public class Ihor {
+public class Hw_01 {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         //task 1-5

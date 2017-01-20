@@ -1,12 +1,12 @@
-package metod;
+package method;
 
 import java.util.Scanner;
 
 /**
  * Created by ihor on 18.01.2017.
- * metod 02
+ * method 02
  */
-public class Metod_02 {
+public class Method_02 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         random(scanner.nextInt());
