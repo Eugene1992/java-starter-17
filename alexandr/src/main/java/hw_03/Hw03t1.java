@@ -25,4 +25,9 @@ public class Hw03t1 {
             System.out.println(i + ". " + temp);
         }
     }
+    static void digitalMore100 (int temp1 ){
+        for (int i = 1000; i < 10000; i += 3) {
+            System.out.println(i);
+        }
+    }
 }
