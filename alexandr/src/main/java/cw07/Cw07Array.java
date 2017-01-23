@@ -53,7 +53,7 @@ public class Cw07Array {
     static void digits13 () {
         int count = 0;
         for (int i = 0; i < 999999 ; i++) {
-            if (i % 10 < 10 && i == 13 ) { count ++;
+            if (i % 100000 > 0 ) { count ++;
 
 
 
