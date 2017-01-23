@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 /**
  * 1. Написать метод который принимает масив и выводит его сумму
+ * 2. Метод подсчета максимального и минимального числа в массиве.
  */
 public class Cw07Array {
     public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class Cw07Array {
                 scan.nextInt()};
         //System.out.println(arr(array));
         // arr(array);          // 1. Написать метод который принимает масив и выводит его сумму
-        System.out.println("Max digit = " + arrMax(array)[0] + " Min digital = " + arrMax(array)[1]);
+        System.out.println("Max digit = " + arrMax(array)[0] + " Min digital = " + arrMax(array)[1]); // 2. Метод подсчета максимального и минимального числа в массиве.
     }
 
     static void arr(int[] temp) {
@@ -51,9 +52,15 @@ public class Cw07Array {
         int count = 0;
         for (int i = 0; i < 999999; i++) {
             if (i % 100000 > 0) {
-                count++;
+                if (i % 10000 > 0) {
+                    if (i % 1000 > 0){
+                        if (i % 100 > 0) {
+                            if (i % 10 > 0){
 
-
+                            }
+                        }
+                    }
+                }
             }
 
         }
