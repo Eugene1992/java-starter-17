@@ -1,12 +1,7 @@
-package CW03;
-
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
-import com.sun.org.apache.xpath.internal.SourceTree;
-import sun.text.resources.cldr.ia.FormatData_ia;
+package cw03;
 
 import java.util.*;
 import java.lang.*;
-import java.io.*;
 
 /**
  * Created by Tanchik on 16.01.2017.
