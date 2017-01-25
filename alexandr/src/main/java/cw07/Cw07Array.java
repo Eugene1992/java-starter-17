@@ -46,25 +46,4 @@ public class Cw07Array {
         maxMin[1] = min;
         return maxMin;
     }
-
-
-    static void digits13() {
-        int count = 0;
-        for (int i = 0; i < 999999; i++) {
-            if (i % 100000 > 0) {
-                if (i % 10000 > 0) {
-                    if (i % 1000 > 0){
-                        if (i % 100 > 0) {
-                            if (i % 10 > 0){
-
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
-    }
-
-
 }
