@@ -15,7 +15,7 @@ public class Arrays_task_1 {
         System.out.println("enter size array.");
         int length = scanner.nextInt();
         int[] array = new int[length];
-        array = CW_arr.randArr(length, 10);
+        array = CW_arr.randArr(length, 0, 10);
         System.out.println("Select the job task 1, task 2, task 3, task 4 (1, 2, 3 or 4)");
         switch (scanner.nextInt()) {
             case 1: {
@@ -37,7 +37,7 @@ public class Arrays_task_1 {
         }
     }
 
-    static void printArr(int[] array) {
+    private static void printArr(int[] array) {
         System.out.println("Array:");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");

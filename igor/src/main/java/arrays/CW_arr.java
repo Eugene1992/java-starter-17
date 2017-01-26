@@ -14,11 +14,10 @@ public class CW_arr {
     }
 
 
-     public static int[] randArr(int length, int b) {
+     public static int[] randArr(int length, int a, int b) {
         int[] array = new int[length];
-        int a = 0;
         for (int i = 0; i < array.length; i++) {
-            array[i] = (byte) (a + (Math.random() * b));
+            array[i] = (int) (a + (Math.random() * b));
         }
         return array;
     }
