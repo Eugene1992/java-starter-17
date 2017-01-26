@@ -13,75 +13,106 @@ public class Arrays_task_1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter size array.");
-        // random. от -100 до 100 (включительно): int a = -101, b = 202;
-        // random. от 0 до 100 [0-100):
-        int a = 0, b = 10;
-        int size = scanner.nextInt();
-        byte[] array = new byte[size];
-        for (int i = 0; i < size; i++) {
-            array[i] = (byte) (a + (Math.random() * b));
+        int length = scanner.nextInt();
+        int[] array = new int[length];
+        array = CW_arr.randArr(length, 10);
+        System.out.println("Select the job task 1, task 2, task 3, task 4 (1, 2, 3 or 4)");
+        switch (scanner.nextInt()) {
+            case 1: {
+                twonessArr(array);
+                break;
+            }
+            case 2: {
+                inversionArr(array);
+                break;
+            }
+            case 3: {
+                printHalfArr(array);
+                break;
+            }
+            case 4: {
+                printInvHalfArr(array);
+                break;
+            }
         }
-        //task 1
+    }
+
+    static void printArr(int[] array) {
+        System.out.println("Array:");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
+
+    static void twonessArr(int[] array) {
         System.out.println("task 1:");
-        for (int i = 0; i < size; i++) {
+        //printArr(array);
+        for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
                 System.out.print(array[i] + " ");
             }
         }
-        //task 2
+    }
+
+    static void inversionArr(int[] array) {
         System.out.println("\ntask 2:");
-        for (int i = size - 1; i >= 0; i--) {
+        //printArr(array);
+        for (int i = array.length - 1; i >= 0; i--) {
             System.out.print(array[i] + " ");
         }
-        //task 3-4
+    }
+
+    static void printHalfArr(int[] array) {
+        int half = choise(array.length);
+        //printArr(array);
+        System.out.println("\ntask 3");
+        for (int i = 0; i < array.length; i++) {
+            if (i == half) {
+                System.out.println();
+            }
+            System.out.print(array[i] + " ");
+        }
+    }
+
+    static void printInvHalfArr(int[] array) {
+        int half = choise(array.length);
+        //printArr(array);
+        System.out.println("\ntask 4");
+        for (int i = half - 1; i >= 0; i--) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+        for (int i = array.length - 1; i >= half; i--) {
+            System.out.print(array[i] + " ");
+        }
+    }
+
+    static int choise(int size) {
+        Scanner scanner = new Scanner(System.in);
         boolean flag;
         int half = size / 2;
         if (size % 2 != 0) {
-            System.out.println("\nМассив не делется попалам. Сделайте выбор 1 - отбросить последний елемент, 2 - первая полавина < второй, 3 -вторая половина >");
+            System.out.println("\nМассив не делется попалам. Сделайте выбор 1 - первая полавина < второй, 2 -вторая половина >");
             do {
                 switch (scanner.nextInt()) {
                     case 1: {
-                        half = (int) (size / 2);
-                        size = size - 1;
-                        flag = false;
-                        break;
-                    }
-                    case 2: {
                         half = (int) (size / 2) + 1;
                         flag = false;
                         break;
                     }
-                    case 3: {
+                    case 2: {
                         half = (int) (size / 2);
                         flag = false;
                         break;
                     }
                     default: {
                         flag = true;
-                        System.out.println("enter your choice (1, 2 or 3).");
+                        System.out.println("enter your choice (1 or 2).");
                         break;
                     }
                 }
             } while (flag);
         }
-        System.out.println("\narray:");
-        for (int i = 0; i < size; i++) {
-            System.out.print(array[i] + " ");
-        }
-        System.out.println("\ntask 3");
-        for (int i = 0; i < size; i++) {
-            if (i == half) {
-                System.out.println();
-            }
-            System.out.print(array[i] + " ");
-        }
-        System.out.println("\ntask 4");
-        for (int i = half - 1; i >= 0; i--) {
-            System.out.print(array[i] + " ");
-        }
-        System.out.println();
-        for (int i = size - 1; i >= half; i--) {
-            System.out.print(array[i] + " ");
-        }
+        return half;
     }
 }
