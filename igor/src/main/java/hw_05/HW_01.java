@@ -6,9 +6,9 @@ package hw_05;
  */
 public class HW_01 {
     public static void main(String[] args) {
-        System.out.println("HappyTickets" + quantityHappyTickets());
-        System.out.println("Clock" + symmetryClock());
-        System.out.println("combinatorics" + combinatorics());
+        System.out.println("HappyTickets " + quantityHappyTickets());
+        System.out.println("Clock " + symmetryClock());
+        System.out.println("combinatorics " + combinatorics());
     }
 
     static int quantityHappyTickets() {

@@ -16,8 +16,8 @@ public class Arrays_task_5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         //System.out.println("enter size array.");
-        int length = 10; // scanner.nextInt();
-        int a = -10, b = 20; //максимальное чисело а масиве
+        int length = 20; // scanner.nextInt();
+        int a = 1, b = 6; //максимальное чисело а масиве
         int[] array = new int[length];
         array = CW_arr.randArr(array.length, a, b);
         //System.out.println(CW_arr.printArr(array));
@@ -43,7 +43,12 @@ public class Arrays_task_5 {
                 System.out.println(CW_arr.printArr(noNegNumbArr(array)));
                 break;
             }
-            case 9: { //todo: task 9
+            case 9: {
+                System.out.println(CW_arr.printArr(array));
+                int[][] arr = task9(array);
+                System.out.println("");
+                System.out.println("что     :" + CW_arr.printArr(arr[0]));
+                System.out.println("сколько :" + CW_arr.printArr(arr[1]));
                 break;
             }
             case 10: {
@@ -168,5 +173,32 @@ public class Arrays_task_5 {
             invArray[array.length - i - 1] = array[i];
         }
         return invArray;
+    }
+
+    static int[][] task9(int[] array) {
+        int count1 = 0, count2 = 0;
+        int[][] arr = new int[2][array.length];
+        for (int i = 0; i < array.length; i++) {
+            boolean flag = false;
+            for (int j = 1 + i; j < array.length; j++) {
+                if ((array[i] == array[j]) && (array[j] != 0)) {
+                    arr[0][count1] = array[i];
+                    arr[1][count1]++;
+                    array[j] = 0;
+                    flag = true;
+                }
+            }
+            if (flag) {
+                count1++;
+            }
+        }
+        for (int i = 0; i < array.length; i++) {
+            if (0 < arr[1][i]) {
+                count2++;
+            }
+        }
+        arr[0] = Arrays_task_12.cloneArray(arr[0], 0, count2);
+        arr[1] = Arrays_task_12.cloneArray(arr[1], 0, count2);
+        return arr;
     }
 }
