@@ -7,6 +7,7 @@ package hw_05;
 public class HW_01 {
     public static void main(String[] args) {
         System.out.println(quantityHappyTickets());
+        System.out.println(symmetryClock());
 
     }
 
@@ -22,4 +23,18 @@ public class HW_01 {
         }
         return counter;
     }
+
+    static int symmetryClock (){
+        int counter = 0;
+        for (int i = 0; i < 24; i++) {
+            for (int j = 0; j < 60; j++) {
+                if ((i/10 == j%10) &&(i%10 == j/10)){
+                    counter++;
+                }
+            }
+        }
+        return counter;
+    }
+
+
 }
