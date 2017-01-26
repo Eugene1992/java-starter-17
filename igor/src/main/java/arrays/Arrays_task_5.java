@@ -47,7 +47,8 @@ public class Arrays_task_5 {
                 break;
             }
             case 10: {
-                System.out.println(array = shiftMaxArr(array));
+                System.out.println(CW_arr.printArr(array));
+                System.out.println(CW_arr.printArr(shiftToCellArr(array, minArr(array, false), maxArr(array, false))));
                 break;
             }
             case 11: {
@@ -60,8 +61,23 @@ public class Arrays_task_5 {
     }
 
     static int maxArr(int[] array, boolean flag) {
-        int spaceMax = 0, max = 0;
-        for (int i = 0; i < array.length; i++) {
+        int spaceMax = 0, max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+                spaceMax = i;
+            }
+        }
+        if (flag) {
+            return max;
+        } else {
+            return spaceMax;
+        }
+    }
+
+    static int maxArr(int[] array, int start, int stop, boolean flag) {
+        int spaceMax = 0, max = array[start];
+        for (int i = start + 1; i < stop; i++) {
             if (max < array[i]) {
                 max = array[i];
                 spaceMax = i;
@@ -80,8 +96,8 @@ public class Arrays_task_5 {
      * @return
      */
     static int minArr(int[] array, boolean flag) {
-        int spaceMin = 0, min = 0;
-        for (int i = 0; i < array.length; i++) {
+        int spaceMin = 0, min = array[0];
+        for (int i = 1; i < array.length; i++) {
             if (min > array[i]) {
                 min = array[i];
                 spaceMin = i;
@@ -94,15 +110,14 @@ public class Arrays_task_5 {
         }
     }
 
-    static int[] shiftMaxArr(int[] array) {
-        int spaceMin = minArr(array, false);
-        int spaceMax = maxArr(array, false);
-        System.out.println("before: " + array[spaceMin] + ", " + array[spaceMax]);
-        array[spaceMin] = (byte) (array[spaceMin] ^ array[spaceMax]);
-        array[spaceMax] = (byte) (array[spaceMin] ^ array[spaceMax]);
-        array[spaceMin] = (byte) (array[spaceMin] ^ array[spaceMax]);
-        System.out.print("now: " + array[spaceMin] + ", " + array[spaceMax]);
-        System.out.println("\ntask 10: done.");
+    public static int[] shiftToCellArr(int[] array, int space1, int space2) {
+        //System.out.println("before: " + array[space1] + ", " + array[space2]);
+        int temp;
+        temp = array[space1];
+        array[space1] = array[space2];
+        array[space2] = temp;
+        //System.out.print("now: " + array[space1] + ", " + array[space2]);
+        //System.out.println("\ntask 10: done.");
         return array;
     }
 
@@ -114,7 +129,20 @@ public class Arrays_task_5 {
         return sum;
     }
 
-    static double averageArr(int[] array) {
+    static int sumArr(int[] array, int start, int stop) {
+        int sum = 0;
+        if (start > stop) {
+            int temp = start;
+            start = stop;
+            stop = temp;
+        }
+        for (int i = start; i < stop; i++) {
+            sum += array[i];
+        }
+        return sum;
+    }
+
+    public static double averageArr(int[] array) {
         array = noNegNumbArr(array);
         double average = 0;
         for (int i = 0; i < array.length; i++) {
@@ -134,10 +162,10 @@ public class Arrays_task_5 {
         return array;
     }
 
-    static int[] inversionArr (int[] array){
+    static int[] inversionArr(int[] array) {
         int[] invArray = new int[array.length];
         for (int i = 0; i < array.length; i++) {
-            invArray[array.length-i-1] = array[i];
+            invArray[array.length - i - 1] = array[i];
         }
         return invArray;
     }
