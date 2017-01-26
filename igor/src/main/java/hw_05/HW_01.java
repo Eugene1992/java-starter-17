@@ -2,13 +2,13 @@ package hw_05;
 
 /**
  * Created by ihor on 26.01.2017.
- * 1 Счастливые билетики. Есть билеты с номерами от 000001 до 999999. «Счастливым» считается билетик у которого сумма первых трёх цифр номера равна сумме последних трёх цифр, как, например, в билетах с номерами 003102 или 567576. С помощью программы, подсчитайте сколько счастливых билетов.
+ * 1 Счастливые билетики.
  */
 public class HW_01 {
     public static void main(String[] args) {
-        System.out.println(quantityHappyTickets());
-        System.out.println(symmetryClock());
-
+        System.out.println("HappyTickets" + quantityHappyTickets());
+        System.out.println("Clock" + symmetryClock());
+        System.out.println("combinatorics" + combinatorics());
     }
 
     static int quantityHappyTickets() {
@@ -24,11 +24,11 @@ public class HW_01 {
         return counter;
     }
 
-    static int symmetryClock (){
+    static int symmetryClock() {
         int counter = 0;
         for (int i = 0; i < 24; i++) {
             for (int j = 0; j < 60; j++) {
-                if ((i/10 == j%10) &&(i%10 == j/10)){
+                if ((i / 10 == j % 10) && (i % 10 == j / 10)) {
                     counter++;
                 }
             }
@@ -36,5 +36,30 @@ public class HW_01 {
         return counter;
     }
 
+    static int combinatorics() {
+        int counter = 0;
 
+        for (int i = 10; i < 999999; i++) {
+            if ((i / 100000 % 10 == 1) && (i / 10000 % 10 == 3)) {
+                counter++;
+            } else {
+                if ((i / 10000 % 10 == 1) && (i / 1000 % 10 == 3)) {
+                    counter++;
+                } else {
+                    if ((i / 1000 % 10 == 1) && (i / 100 % 10 == 3)) {
+                        counter++;
+                    } else {
+                        if ((i / 100 % 10 == 1) && (i / 10 % 10 == 3)) {
+                            counter++;
+                        } else {
+                            if ((i / 10 % 10 == 1) && (i / 1 % 10 == 3)) {
+                                counter++;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return counter;
+    }
 }
