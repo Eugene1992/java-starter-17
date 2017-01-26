@@ -29,7 +29,6 @@ public class Cw07Array {
         System.out.print("]");
     }
 
-    // todo : Найти максимальное и минимальное число в массиве. !!!!!
     static int[] arrMax(int[] temp) {
         int max = temp[0], min = temp[1];
 
