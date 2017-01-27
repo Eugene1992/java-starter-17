@@ -43,20 +43,22 @@ public class Recursion {
         return result;
     }
 
-    static String passwordGenerator (int coutner) {
+    static String passwordGenerator(int coutner) {
         String pass = "";
         for (int i = 0; i < coutner; i++) {
-            pass+= randChar();
+            pass += randChar();
         }
         return pass;
     }
 
-    static char randChar (){
+    static char randChar() {
         int a = 48, b = 122;
         char ch = 0;
-        int number =(int) (a + (Math.random() * b));
-        while ((48 <= number & number <= 57) | (65 <= number & number <= 90) | (97 <= number & number <= 122)) {
-            ch = (char) (a + Math.random() * b);
+        int number = (int) (a + (Math.random() * b));
+        if ((48 <= number & number <= 57) | (65 <= number & number <= 90) | (97 <= number & number <= 122)) {
+            ch = (char) number;
+        } else {
+            ch = randChar();
         }
         return ch;
     }
